@@ -7,7 +7,7 @@ const deleteDocument = require("../controllers/deleteDocument");
 
 const router = express.Router();
 
-router.post("/upload", upload.single("file"), uploadDocument);
+router.post("/upload", uploadDocument);
 router.get("/", listDocuments);
 router.get("/:id", downloadDocument);
 router.delete("/:id", deleteDocument);
